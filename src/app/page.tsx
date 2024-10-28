@@ -1,8 +1,30 @@
 
-export default function Home() {
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Image from "next/image";
+
+export default async function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-        <h1 className="text-red">First Try</h1>
-    </div>
+    <main className="flex flex-col items-center justify-center p-24">
+      <Card className="max-w-sm">
+        <CardHeader>
+          <Image
+            className="rounded-lg"
+            src="/toplama.png"
+            alt="img"
+            width={500}
+            height={500}
+            priority
+          />
+        </CardHeader>
+        <CardContent>
+          <CardTitle className="mb-2 text-2xl font-bold">
+            Hoşgeldiniz!
+          </CardTitle>
+          <p className="text-muted-foreground">
+            Temiz çevre projesi.
+          </p>
+        </CardContent>
+      </Card>
+    </main>
   );
 }
